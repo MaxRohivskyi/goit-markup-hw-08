@@ -1,0 +1,33 @@
+/* footer */
+
+.page-footer {
+    padding: 60px 0;
+
+    background-color: $secondary-background-color;
+}
+
+.page-footer__wrapper {
+    display: flex;
+    align-items: baseline;
+}
+
+.page-footer__adress {
+    margin-right: 70px;
+}
+
+.page-footer__social {
+    margin-right: 93px;
+}
+
+.page-footer__form {
+    margin-right: 0;
+}
+
+.page-footer__text {
+    margin-bottom: 20px;
+
+    color: $primary-white-color;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+}

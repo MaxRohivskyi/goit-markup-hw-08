@@ -1,0 +1,33 @@
+/* adress-nav */
+
+.adress-nav {
+    display: flex;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.adress-nav__link {
+    display: flex;
+    align-items: center;
+
+    color: $primary-text-color;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color $time-animation $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.adress-nav__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

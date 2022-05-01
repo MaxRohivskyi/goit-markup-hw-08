@@ -1,0 +1,33 @@
+/* footer adress */
+
+.footer-adress {
+    margin-top: 20px;
+
+    &__link {
+        color: $adress-footer;
+        font-style: normal;
+        line-height: 1.7;
+        text-decoration: none;
+    
+        transition: color $time-animation $timing-function;
+    }
+    
+    &__text {
+        color: $primary-white-color;
+        font-style: normal;
+        line-height: 1.7;
+    }
+    
+    &__item {
+        margin-bottom: 9px;
+    }
+    
+    &__item:nth-child(3n) {
+        margin-bottom: 0;
+    }
+    
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
+    }
+}

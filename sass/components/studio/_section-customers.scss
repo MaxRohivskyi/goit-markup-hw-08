@@ -1,0 +1,44 @@
+/* customers */
+
+.customers {
+    display: flex;
+
+    &__item {
+        width: calc((100% - 150px) / 6);
+        margin-right: 30px;
+    }
+    
+    &__item:nth-child(6n) {
+        margin-right: 0;
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 92px;
+        padding: 16px 32px;
+    
+        color: $background-color-icon;
+    
+        background-color: $primary-white-color;
+        border: 1px solid $background-color-icon;
+        border-radius: 4px;
+    
+        transition: background-color $time-animation $timing-function,
+            color $time-animation $timing-function,
+            border $time-animation $timing-function;
+    }
+    
+    &__icon {
+        fill: currentColor;
+    }
+    
+    &__link:hover {
+        color: $accent-color;
+    
+        background-color: $primary-white-color;
+        border: 1px solid $accent-color;
+    }
+}
