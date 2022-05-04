@@ -34,7 +34,7 @@
     }
 }
 
-.nav__btn .nav__icon-cross {
+.nav__btn .nav__btn-close {
     display: none;
 }
 
@@ -44,7 +44,7 @@
     right: 15px;
 }
 
-.nav__btn--is-open .nav__btn-cross {
+.nav__btn--is-open .nav__btn-close {
     display: block;
 }
 
@@ -81,7 +81,7 @@
     }
 }
 
-.menu-block__socials {
+.menu-block__social {
     display: inline-block;
     font-size: 0px;
 
