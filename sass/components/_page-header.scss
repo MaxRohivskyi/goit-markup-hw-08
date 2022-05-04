@@ -2,16 +2,14 @@
 
 .page-header {
     border-bottom: 1px solid $header-border-color;
-}
 
-/* page-header__nav */
-
-.page-header__nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    align-items: center;
+    &__nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    
+        align-items: center;
+    }
 }
 
 .nav__btn {
@@ -22,7 +20,12 @@
     background-color: transparent;
     z-index: 2;
     transition: fill $time-animation $timing-function;
-    cursor: pointer;
+
+    &--is-open {
+        position: fixed;
+        top: 0;
+        right: 15px;
+    }
 
     &:hover,
     &:focus {
@@ -38,71 +41,10 @@
     display: none;
 }
 
-.nav__btn--is-open {
-    position: fixed;
-    top: 0;
-    right: 15px;
-}
-
 .nav__btn--is-open .nav__btn-close {
     display: block;
 }
 
 .nav__btn--is-open .nav__btn-menu {
     display: none;
-}
-
-.menu-block {
-    @media screen and (max-width: 767px) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-        height: 100vh;
-        width: 100%;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 40px;
-        padding-right: 40px;
-        background-color: #fff;
-        z-index: 1;
-        overflow-y: scroll;
-
-        &--is-open {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-    }
-}
-
-.menu-block__social {
-    display: inline-block;
-    font-size: 0px;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-.menu-block__social-item {
-    display: inline-block;
-    padding-right: 10px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.23;
-
-    &:not(:first-child) {
-        border-left: 1px solid rgba(33, 33, 33, 0.2);
-        padding-left: 10px;
-    }
-}
-
-.menu-block__social-link {
-    color: $accent-color;
 }

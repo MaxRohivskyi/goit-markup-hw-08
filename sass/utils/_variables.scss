@@ -38,6 +38,12 @@ body {
     letter-spacing: 0.03em;
 
     background-color: $primary-white-color;
+
+    &.modal-open {
+        @media screen and (max-width: 767px) {
+            overflow: hidden;
+        }
+    }
 }
 
 h1,
@@ -48,6 +54,10 @@ h5,
 h6,
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
