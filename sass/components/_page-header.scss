@@ -4,11 +4,10 @@
     border-bottom: 1px solid $header-border-color;
 
     &__nav {
-        position: relative;
         display: flex;
-        justify-content: space-between;
     
         align-items: center;
+        justify-content: space-between;
     }
 }
 
