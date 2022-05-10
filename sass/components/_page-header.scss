@@ -3,12 +3,16 @@
 .page-header {
     border-bottom: 1px solid $header-border-color;
 
-    &__nav {
-        display: flex;
-    
-        align-items: center;
-        justify-content: space-between;
+    &__container {
+        position: relative;
     }
+}
+
+.page-header__nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav__btn {
