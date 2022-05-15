@@ -1,10 +1,17 @@
 /* services */
 
 .section-services {
-    padding-top: 0;
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        padding-top: 0;
+}
 }
 
 .services {
+    @extend %list;
+
     display: flex;
     flex-wrap: wrap;
 

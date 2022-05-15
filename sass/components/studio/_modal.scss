@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
 
-    width: 528px;
+    width: 450px;
     padding: 40px;
 
     background-color: $primary-white-color;
@@ -12,6 +12,10 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform $time-animation $timing-function;
+
+    @media screen and (min-width: 1200px) {
+            width: 528px;
+        }
 }
 
 /* modal button close */

@@ -10,7 +10,7 @@
 <body>
     <!--Шапка сайта-->
     <header class="page-header">
-        <div class="container page-header__container">
+        <div class="container">
             <nav class="page-header__nav">
                 <a href="./index.html" class="logo">Web<span class="logo--page-header">Studio</span></a>
                 <button class="nav__btn pointer" aria-expanded="false" aria-controls="menu-block" data-menu-button>
@@ -20,12 +20,12 @@
                     </svg>
                 </button>
                 <div class="menu-block" id="menu-block" data-menu>
-                    <ul class="site-nav list">
+                    <ul class="site-nav">
                         <li class="site-nav__item"><a href="./index.html" class="site-nav__link current">Студия</a></li>
                         <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
                         <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
                     </ul>
-                    <ul class="adress-nav list">
+                    <ul class="adress-nav">
                         <li class="adress-nav__item adress-nav__mail">
                             <a href="mailto:info@devstudio.com" class="adress-nav__link" aria-label="envelope">
                                 <svg class="adress-nav__icon adress-nav__icon-mail">
@@ -39,7 +39,7 @@
                                 </svg>+38 096 111 11 11</a>
                         </li>
                     </ul>
-                    <ul class="menu-block__social list">
+                    <ul class="menu-block__social">
                         <li class="menu-block__social-item">
                             <a href="./index.html" class="menu-block__social-link" target="_blank" rel="noopener noreferrer nofolow"
                                 aria-label="instagram">Instagram</a>
@@ -65,15 +65,14 @@
     <main>
         <!--Герой-->
         <section class="hero">
-            <div class="container hero__container">
+            <div class="container">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button type="button" class="hero__btn pointer" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
         <!-- Modal -->
-
-        <div class="backdrop backdrop--is-hidden" data-modal>
+        <div class="backdrop backdrop is-hidden" data-modal>
             <div class="modal">
                 <button data-modal-close class="modal__btn--close pointer">
                     <svg class="modal__btn-icon" width="11" height="11">
@@ -132,7 +131,7 @@
             <div class="container">
                 <h2 class="visually-hidden">Преимущества</h2>
                 
-                <ul class="features list">
+                <ul class="features">
                     <li class="features__item">
                         <div class="features__box">
                             <svg width="65.32" height="70">
@@ -177,22 +176,49 @@
         <section class="section section-services">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
-                
                 <ul class="services list">
                     <li class="services__item">
-                        <img src="./images/img1.jpg" alt="Десктопные приложения" width="370">
+                        <!-- Дексриптор x -->
+                        <img 
+                          srcset="
+                            ./images/img1@1x-min.jpg 1x
+                            ./images/img1@2x-min.jpg 2x
+                            ./images/img1@3x-min.jpg 3x
+                          "
+                          src="./images/img1@1x-min.jpg"
+                          alt="someone is coding"
+                          width="370"
+                        />
                         <div class="services__thumb">
                             <p class="services__description">Десктопные приложения</p>
                         </div>
                     </li>
                     <li class="services__item">
-                        <img src="./images/img2.jpg" alt="Мобильные приложения" width="370">
+                        <img 
+                          srcset="
+                            ./images/img2@1x-min.jpg 1x
+                            ./images/img2@2x-min.jpg 2x
+                            ./images/img2@3x-min.jpg 3x
+                          "
+                          src="./images/img2@1x-min.jpg"
+                          alt="someone is coding with phone"
+                          width="370"
+                        />
                         <div class="services__thumb">
                             <p class="services__description">Мобильные приложения</p>
                         </div>
                     </li>
                     <li class="services__item">
-                        <img src="./images/img3.jpg" alt="Дизайнерские решения" width="370">
+                        <img 
+                          srcset="
+                            ./images/img3@1x-min.jpg 1x
+                            ./images/img3@2x-min.jpg 2x
+                            ./images/img3@3x-min.jpg 3x
+                          "
+                          src="./images/img3@1x-min.jpg"
+                          alt="someone is coding with tablet"
+                          width="370"
+                        />
                         <div class="services__thumb">
                             <p class="services__description">Дизайнерские решения</p>
                         </div>

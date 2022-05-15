@@ -1,9 +1,8 @@
 /* features */
 
 .features {
-    display: flex;
-    flex-wrap: wrap;
-
+    @extend %list;
+    
     &__box {
         display: flex;
         height: 120px;
@@ -14,13 +13,32 @@
         background-color: $section-background-color;
     }
     
-    &__item {
-        width: calc((100% - 90px) / 4);
-        margin-right: 30px;
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            width: calc((100% - 30px) / 2);
+            margin-right: 30px;
+        }
+
+        &__item:nth-child(2n) {
+            margin-right: 0;
+        }
     }
-    
-    &__item:nth-child(4n) {
-        margin-right: 0;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            width: calc((100% - 90px) / 4);
+            margin-right: 30px;
+        }
+
+        &__item:nth-child(4n) {
+            margin-right: 0;
+        }
     }
     
     &__title {
@@ -29,11 +47,16 @@
         color: $title-text-color;
         font-weight: 700;
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 1.14;
+        text-align: center;
         text-transform: uppercase;
+
+        @media screen and (min-width: 768px) {
+        text-align: left;
+    }
     }
     
     &__text {
-        line-height: 1.7;
+        line-height: 1.71;
     }
 }
