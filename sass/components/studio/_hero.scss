@@ -12,7 +12,7 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(/images/hero-mobile@1x-min.jpg);
+        url(../images/hero-mobile@1x-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,7 +30,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/hero-mobile@2x-min.jpg);
+            url(../images/hero-mobile@2x-min.jpg);
     }
 }
 
@@ -41,7 +41,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/hero-mobile@3x-min.jpg);
+            url(../images/hero-mobile@3x-min.jpg);
     }
 }
 
@@ -50,7 +50,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/hero-tablet@1x-min.jpg);
+            url(../images/hero-tablet@1x-min.jpg);
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -60,7 +60,7 @@
             background-image: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(/images/hero-tablet@2x-min.jpg);
+                url(../images/hero-tablet@2x-min.jpg);
         }
     }
 
@@ -71,7 +71,7 @@
             background-image: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(/images/hero-tablet@3x-min.jpg);
+                url(../images/hero-tablet@3x-min.jpg);
         }
     }
 }
@@ -81,7 +81,7 @@
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/hero-desktop@1x-min.jpg);
+            url(../images/hero-desktop@1x-min.jpg);
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -91,7 +91,7 @@
             background-image: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(/images/hero-desktop@2x-min.jpg);
+                url(../images/hero-desktop@2x-min.jpg);
         }
     }
 
@@ -102,7 +102,7 @@
             background-image: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(/images/hero-desktop@3x-min.jpg);
+                url(../images/hero-desktop@3x-min.jpg);
         }
     }
 }
