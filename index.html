@@ -12,7 +12,7 @@
     <header class="page-header">
         <div class="container">
             <nav class="page-header__nav">
-                <a href="./index.html" class="logo">Web<span class="logo--page-header">Studio</span></a>
+                <a href="./index.html" class="logo logo__page-header">Web<span class="logo--page-header--color">Studio</span></a>
                 <button class="nav__btn pointer" aria-expanded="false" aria-controls="menu-block" data-menu-button>
                     <svg width="40" height="40">
                         <use class="nav__btn-close" href="./images/symbol-defs.svg#close_40px"></use>
@@ -232,13 +232,21 @@
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
                 
-                <ul class="workers list">
+                <ul class="workers">
                     <li class="workers__item">
-                        <img src="./images/img4.jpg" alt="Product Designer" width="270">
+                        <img
+                          srcset="
+                            ./images/img4-450-min.jpg   450w,
+                            ./images/img4-900-min.jpg   900w,
+                            ./images/img4-1350-min.jpg  1350w
+                            "
+                            src="./images/img4-450-min.jpg" alt="Product Designer"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                        />
                         <div class="workers-card">
                             <h3 class="workers-card__title">Игорь Демьяненко</h3>
                             <p class="workers-card__text">Product Designer</p>
-                            <ul class="workers-social list">
+                            <ul class="workers-social">
                                 <li class="workers-social__item">
                                     <a href="./index.html" class="workers-social__link" target="_blank" rel="noopener noreferrer nofolow" aria-label="instagram">
                                         <svg class="workers-social__icon" width="20" height="20">
@@ -271,7 +279,15 @@
                         </div>
                     </li>
                     <li class="workers__item">
-                        <img src="./images/img5.jpg" alt="Frontend Developer" width="270">
+                        <img
+                          srcset="
+                            ./images/img5-450-min.jpg   450w,
+                            ./images/img5-900-min.jpg   900w,
+                            ./images/img5-1350-min.jpg  1350w
+                            "
+                            src="./images/img5-450-min.jpg" alt="Frontend Developer"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                        />
                         <div class="workers-card">
                             <h3 class="workers-card__title">Ольга Репина</h3>
                             <p class="workers-card__text"> Frontend Developer</p>
@@ -308,7 +324,15 @@
                         </div>
                     </li>
                     <li class="workers__item">
-                        <img src="./images/img6.jpg" alt="Marketing" width="270">
+                        <img
+                          srcset="
+                            ./images/img6-450-min.jpg   450w,
+                            ./images/img6-900-min.jpg   900w,
+                            ./images/img6-1350-min.jpg  1350w
+                            "
+                            src="./images/img6-450-min.jpg" alt="Marketing"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                        />
                         <div class="workers-card">
                             <h3 class="workers-card__title">Николай Тарасов</h3>
                             <p class="workers-card__text">Marketing</p>
@@ -345,7 +369,15 @@
                         </div>
                     </li>
                     <li class="workers__item">
-                        <img src="./images/img7.jpg" alt="UI Designer" width="270">
+                        <img
+                          srcset="
+                            ./images/img7-450-min.jpg   450w,
+                            ./images/img7-900-min.jpg   900w,
+                            ./images/img7-1350-min.jpg  1350w
+                            "
+                            src="./images/img7-450-min.jpg" alt="UI Designer"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" 
+                        />
                         <div class="workers-card">
                             <h3 class="workers-card__title">Михаил Ермаков</h3>
                             <p class="workers-card__text">UI Designer</p>
@@ -390,7 +422,7 @@
             <div class="container">
                 <h2 class="section__title">Постоянные клиенты</h2>
 
-                <ul class="customers list">
+                <ul class="customers">
                     <li class="customers__item">
                         <a href="./index.html" class="customers__link" target="_blank" rel="noopener noreferrer nofolow" aria-label="client-1">
                                 <svg class="customers__icon" width="41" height="46.7">
@@ -440,11 +472,11 @@
 
     <!-- Футер -->
     <footer class="page-footer">
-        <div class="page-footer__wrapper container">
+        <div class="container page-footer__container">
             <div class="page-footer__adress">
-                <a href="./index.html" class="logo">Web<span class="logo--page-footer">Studio</span></a>
+                <a href="./index.html" class="logo logo__page-footer">Web<span class="logo__page-footer--color">Studio</span></a>
                 <address>
-                    <ul class="footer-adress list">
+                    <ul class="footer-adress">
                         <li class="footer-adress__item">
                             <p class="footer-adress__text">г. Киев, пр-т Леси Украинки, 26</p>
                         </li>
@@ -458,8 +490,8 @@
                 </address>
             </div>
             <div class="page-footer__social">
-                <p class="page-footer__text">присоединяйтесь</p>
-                <ul class="footer-social list">
+                <p class="page-footer__social-text">присоединяйтесь</p>
+                <ul class="footer-social">
                     <li class="footer-social__item">
                         <a href="./index.html" class="footer-social__link" target="_blank" rel="noopener noreferrer nofolow"
                             aria-label="instagram">
@@ -495,7 +527,7 @@
                 </ul>
             </div>
             <div class="page-footer__form">
-                <p class="page-footer__text">Подпишитесь на рассылку</p>
+                <p class="page-footer__form-text">Подпишитесь на рассылку</p>
                 <form class="footer-form">
                     <label class="footer-form__field">
                         <input type="email" name="mail" id="mail" placeholder="E-mail" class="footer-form__input pointer" />

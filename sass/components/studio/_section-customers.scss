@@ -1,24 +1,45 @@
 /* customers */
 
 .customers {
+    @extend %list;
+
     display: flex;
+    
+    @media screen and (max-width: 1199px) {
+        flex-wrap: wrap;
+        margin: -15px;
+    }
 
     &__item {
-        width: calc((100% - 150px) / 6);
-        margin-right: 30px;
-    }
-    
-    &__item:nth-child(6n) {
-        margin-right: 0;
+        @media screen and (max-width: 767px) {
+            width: calc((100% - 4 * 15px) / 2);
+        }
+        
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 6 * 15px) / 3);
+        }
+        
+        @media screen and (max-width: 1199px) {
+            margin: 15px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+        
+        &:not(:last-child) {
+            @media screen and (min-width: 1200px) {
+                margin-right: 30px;
+            }
+        }
     }
     
     &__link {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 170px;
+        
         height: 92px;
-        padding: 16px 32px;
     
         color: $background-color-icon;
     

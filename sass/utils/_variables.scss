@@ -146,10 +146,8 @@ img {
         line-height: 1.19;
     }
 
-    &--page-header {
+    &__page-header {
         margin-right: auto;
-
-        color: $title-text-color;
 
         @media screen and (min-width: 768px) {
             margin-right: 88px;
@@ -160,11 +158,19 @@ img {
         }
     }
 
-    &--page-footer {
-        display: inline-block;
-        margin-right: 0;
+    &--page-header--color {
+        color: $title-text-color;
+    }
+
+    &__page-footer {
+        display: block;
+        
         margin-bottom: 20px;
 
+        text-align: center;
+    }
+
+    &__page-footer--color {
         color: $primary-white-color;
     }
 }
