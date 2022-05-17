@@ -20,15 +20,6 @@
     }
 }
 
-.page-footer__form-text  .page-footer__social-text{
-    margin-bottom: 20px;
-
-    color: $primary-white-color;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
-}
-
 /* footer adress */
 
 .page-footer__adress {
@@ -78,14 +69,28 @@
 /* footer social-link */
 
 .page-footer__social {
-    @media screen and (max-width: 1199px) {
+    &--text {
+        margin-bottom: 20px;
+
+        color: $primary-white-color;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+    
+    @media screen and (max-width: 767px) {
         margin-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      margin-left: 165px;
+    }
+    
+    @media screen and (max-width: 1199px) {
         text-align: center;
     }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        display: inline-block;
-        margin-left: 76px;
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
     }
 }
 
@@ -93,13 +98,12 @@
     @extend %list;
 
     display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 206px;
 
-    &__item {
+    &__item:not(:last-child) {
         margin-right: 10px;
-    }
-
-    &__item:nth-child(4n) {
-        margin-right: 0;
     }
 
     &__link {
@@ -128,17 +132,50 @@
 
 /* footer-form */
 
-.footer-form {
+.page-footer__form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &__field {
-        display: flex;
+    &--text {
+        margin-bottom: 20px;
+
+        color: $primary-white-color;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
     }
 
-    &__field input {
-        margin-right: 12px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin: 0 auto;
+        text-align: center;
+    }
+  
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
+}
+
+.footer-form {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__field &__input {
         padding: 15px 16px;
-        width: 358px;
+        margin-bottom: 20px;
+        width: 450px;
         height: 50px;
 
         color: $adress-footer;
@@ -149,6 +186,15 @@
 
         transition: border $time-animation $timing-function,
             box-shadow $time-animation $timing-function;
+
+        @media screen and (min-width: 768px) {
+            width: 450px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            margin-right: 12px;
+            width: 358px;
+        }
     }
 
     &__field input::placeholder {
