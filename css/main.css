@@ -410,9 +410,8 @@ img {
 }
 
 .logo__page-footer {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .logo__page-footer--color {
@@ -1473,14 +1472,14 @@ img {
 
 /* footer adress */
 @media screen and (max-width: 1199px) {
-  .footer-adress {
+  .page-footer__adress {
     margin-bottom: 60px;
     text-align: center;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer-adress {
+  .page-footer__adress {
     display: inline-block;
     margin-left: 76px;
   }
@@ -1514,6 +1513,20 @@ img {
 }
 
 /* footer social-link */
+@media screen and (max-width: 1199px) {
+  .page-footer__social {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__social {
+    display: inline-block;
+    margin-left: 76px;
+  }
+}
+
 .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
