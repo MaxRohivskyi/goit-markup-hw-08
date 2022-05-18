@@ -133,10 +133,6 @@
 /* footer-form */
 
 .page-footer__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     &--text {
         margin-bottom: 20px;
 
@@ -148,13 +144,12 @@
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         margin: 0 auto;
-        text-align: center;
     }
-  
+
     @media screen and (max-width: 1199px) {
         text-align: center;
     }
-    
+
     @media screen and (min-width: 1200px) {
         margin-left: 93px;
     }
@@ -162,50 +157,15 @@
 
 .footer-form {
     @media screen and (max-width: 1199px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
+
+        &__field {
+            margin-bottom: 20px;
+        }
     }
 
     @media screen and (min-width: 1200px) {
         display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__field &__input {
-        padding: 15px 16px;
-        margin-bottom: 20px;
-        width: 450px;
-        height: 50px;
-
-        color: $adress-footer;
-
-        background-color: $secondary-background-color;
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-
-        transition: border $time-animation $timing-function,
-            box-shadow $time-animation $timing-function;
-
-        @media screen and (min-width: 768px) {
-            width: 450px;
-        }
-        
-        @media screen and (min-width: 1200px) {
-            margin-right: 12px;
-            width: 358px;
-        }
-    }
-
-    &__field input::placeholder {
-        color: $adress-footer;
-        line-height: 1.25;
-    }
-
-    &__input:focus {
-        border: 1px solid $accent-color;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        outline: none;
     }
 
     &__icon {
@@ -213,6 +173,53 @@
     }
 
     &__btn {
+        @extend %pointer;
+        
         @extend %btn;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 12px;
+        }
     }
 }
+
+.footer-form__input {
+    @extend %pointer;
+
+    padding: 15px 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+
+    color: $adress-footer;
+
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: border $time-animation $timing-function,
+        box-shadow $time-animation $timing-function;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
+
+    &::placeholder {
+        color: $adress-footer;
+        line-height: 1.25;
+    }
+
+    &:focus {
+        border: 1px solid $accent-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        outline: none;
+    }
+}
+

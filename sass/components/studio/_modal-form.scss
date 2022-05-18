@@ -28,6 +28,8 @@
     }
 
     &__field input {
+        @extend %pointer;
+
         margin-bottom: 10px;
         padding-left: 42px;
         width: 370px;
@@ -69,6 +71,8 @@
     }
 
     &__comment {
+        @extend %pointer;
+
         margin-bottom: 20px;
         padding: 12px 16px;
         width: 370px;
@@ -92,6 +96,8 @@
     }
 
     &__btn {
+        @extend %pointer;
+        
         @extend %btn;
     }
 }
