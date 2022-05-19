@@ -363,13 +363,13 @@ img {
   overflow: hidden;
 }
 
-.menu-block__social, .site-nav, .adress-nav, .features, .services, .workers, .workers-social, .customers, .footer-adress, .footer-social {
+.mobile-menu__social, .site-nav, .adress-nav, .features, .services, .workers, .workers-social, .customers, .footer-adress, .footer-social {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.modal__btn--close, .modal-form__field input, .modal-form__comment, .modal-form__btn, .footer-form__btn, .footer-form__input {
+.hero__btn, .modal__btn--close, .modal-form__input, .modal-form__comment, .modal-form__btn, .modal-form__checkbox, .footer-form__btn, .footer-form__input {
   cursor: pointer;
 }
 
@@ -474,11 +474,11 @@ img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  z-index: 2;
   margin: 0;
   padding: 10px 0;
-  border: none;
   background-color: transparent;
-  z-index: 2;
+  border: none;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -512,7 +512,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .menu-block {
+  .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -524,7 +524,7 @@ img {
     z-index: 1;
     overflow-y: scroll;
   }
-  .menu-block--is-open {
+  .mobile-menu--is-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -539,7 +539,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-block {
+  .mobile-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -549,17 +549,17 @@ img {
   }
 }
 
-.menu-block__social {
+.mobile-menu__social {
   display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-block__social {
+  .mobile-menu__social {
     display: none;
   }
 }
 
-.menu-block__social-item {
+.mobile-menu__social-item {
   display: inline-block;
   padding-right: 10px;
   font-weight: 500;
@@ -568,12 +568,12 @@ img {
   letter-spacing: 0.02em;
 }
 
-.menu-block__social-item:not(:first-child) {
+.mobile-menu__social-item:not(:first-child) {
   padding-left: 10px;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.menu-block__social-link {
+.mobile-menu__social-link {
   color: #2196f3;
 }
 
@@ -877,15 +877,22 @@ img {
 /* backdrop */
 .backdrop {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 94px 15px;
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden {
@@ -900,26 +907,58 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 100%;
   padding: 40px;
   background-color: white;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 450px;
+    min-height: 610px;
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    min-width: 530px;
+    min-height: 580px;
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  color: #212121;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
   }
 }
 
@@ -961,57 +1000,43 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.modal-form__title {
-  margin-bottom: 30px;
-  color: #212121;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
+.modal-form__field {
+  position: relative;
+  margin-bottom: 10px;
 }
 
-@media screen and (min-width: 1200px) {
-  .modal-form__title {
-    line-height: 1.15;
-  }
+.modal-form__field:nth-child(4) {
+  margin-bottom: 20px;
 }
 
 .modal-form__label {
-  margin: 0 auto 4px 0;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
-.modal-form__field {
-  position: relative;
-}
-
-.modal-form__field input {
-  margin-bottom: 10px;
-  padding-left: 42px;
-  width: 370px;
+.modal-form__input {
+  width: 100%;
   height: 40px;
+  padding-left: 42px;
   color: #757575;
   font-size: 12px;
   line-height: 1.17;
+  letter-spacing: 0.01em;
   background-color: white;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   -webkit-transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 1200px) {
-  .modal-form__field input {
-    width: 448px;
-  }
 }
 
 .modal-form__field:focus-within > .modal-form__icon {
@@ -1025,7 +1050,7 @@ img {
 
 .modal-form__icon {
   position: absolute;
-  top: 11px;
+  top: 29px;
   left: 12px;
   width: 18px;
   height: 18px;
@@ -1034,12 +1059,11 @@ img {
 }
 
 .modal-form__comment {
-  margin-bottom: 20px;
   padding: 12px 16px;
-  width: 370px;
+  width: 100%;
   height: 120px;
   color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   background-color: white;
@@ -1050,10 +1074,14 @@ img {
   resize: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .modal-form__comment {
-    width: 448px;
-  }
+.modal-form__comment:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+
+.modal-form__btn {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* checkbox */
@@ -1099,8 +1127,23 @@ img {
   border-bottom: 1px solid #2196f3;
 }
 
-.modal-form__checkbox-icon {
-  display: block;
+@media screen and (min-width: 1200px) {
+  .modal-form__contract-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.modal-form__checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 16px;
   height: 15px;
   border-radius: 2px;
@@ -1109,7 +1152,7 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form__checkbox-input:checked:focus + .modal-form__checkbox-icon {
+.modal-form__checkbox-input:checked:focus + .modal-form__checkbox {
   border-color: transparent;
   background-color: #2196f3;
 }
@@ -1119,14 +1162,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 120px;
-  margin-bottom: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
   background-color: #f5f4fa;
 }
 
@@ -1182,6 +1225,7 @@ img {
 
 .features__text {
   line-height: 1.71;
+  margin-bottom: 30px;
 }
 
 /* services */

@@ -128,5 +128,8 @@
 
 .hero__btn {
     @extend %btn;
+
+    @extend %pointer;
+
     margin: 0 auto 0;
 }

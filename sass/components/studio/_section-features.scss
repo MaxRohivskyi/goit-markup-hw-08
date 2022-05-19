@@ -5,10 +5,10 @@
     
     &__box {
         display: flex;
-        height: 120px;
-        margin-bottom: 30px;
         justify-content: center;
         align-items: center;
+        height: 120px;
+        margin-bottom: 30px;
     
         background-color: $section-background-color;
     }
@@ -58,5 +58,6 @@
     
     &__text {
         line-height: 1.71;
+        margin-bottom: 30px;
     }
 }

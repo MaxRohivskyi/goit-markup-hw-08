@@ -16,51 +16,54 @@
             <nav class="page-header__nav">
                 <a href="./index.html" class="logo logo__page-header">Web<span
                         class="logo--page-header--color">Studio</span></a>
-                <button class="nav__btn pointer" aria-expanded="false" aria-controls="menu-block" data-menu-button>
+                <button class="nav__btn" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
                     <svg width="40" height="40">
                         <use class="nav__btn-close" href="./images/symbol-defs.svg#close_40px"></use>
                         <use class="nav__btn-menu" href="./images/symbol-defs.svg#menu_40px"></use>
                     </svg>
                 </button>
-                <div class="menu-block" id="menu-block" data-menu>
+    
+                <div class="mobile-menu" id="mobile-menu" data-menu>
                     <ul class="site-nav">
                         <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a></li>
                         <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link current">Портфолио</a></li>
                         <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
                     </ul>
-                    <ul class="adress-nav">
-                        <li class="adress-nav__item adress-nav__mail">
-                            <a href="mailto:info@devstudio.com" class="adress-nav__link" aria-label="envelope">
-                                <svg class="adress-nav__icon adress-nav__icon-mail">
-                                    <use href="./images/symbol-defs.svg#envelope"></use>
-                                </svg> info@devstudio.com</a>
-                        </li>
-                        <li class="adress-nav__item adress-nav__tel">
-                            <a href="tel:+380961111111" class="adress-nav__link adress-nav__link--large"
-                                aria-label="smartphone">
-                                <svg class="adress-nav__icon adress-nav__icon-tel">
-                                    <use href="./images/symbol-defs.svg#smartphone"></use>
-                                </svg>+38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                    <ul class="menu-block__social">
-                        <li class="menu-block__social-item">
-                            <a href="./index.html" class="menu-block__social-link" target="_blank"
-                                rel="noopener noreferrer nofolow" aria-label="instagram">Instagram</a>
-                        </li>
-                        <li class="menu-block__social-item">
-                            <a href="./index.html" class="menu-block__social-link" target="_blank"
-                                rel="noopener noreferrer nofolow" aria-label="twitter">Twitter</a>
-                        </li>
-                        <li class="menu-block__social-item">
-                            <a href="./index.html" class="menu-block__social-link" target="_blank"
-                                rel="noopener noreferrer nofolow" aria-label="facebook">Facebook</a>
-                        </li>
-                        <li class="menu-block__social-item">
-                            <a href="./index.html" class="menu-block__social-link" target="_blank"
-                                rel="noopener noreferrer nofolow" aria-label="linkedIn">LinkedIn</a>
-                        </li>
-                    </ul>
+                    <div class="mobaile-menu__block">
+                        <ul class="adress-nav">
+                            <li class="adress-nav__item adress-nav__mail">
+                                <a href="mailto:info@devstudio.com" class="adress-nav__link" aria-label="envelope">
+                                    <svg class="adress-nav__icon adress-nav__icon-mail">
+                                        <use href="./images/symbol-defs.svg#envelope"></use>
+                                    </svg> info@devstudio.com</a>
+                            </li>
+                            <li class="adress-nav__item adress-nav__tel">
+                                <a href="tel:+380961111111" class="adress-nav__link adress-nav__link--large"
+                                    aria-label="smartphone">
+                                    <svg class="adress-nav__icon adress-nav__icon-tel">
+                                        <use href="./images/symbol-defs.svg#smartphone"></use>
+                                    </svg>+38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-menu__social">
+                            <li class="mobile-menu__social-item">
+                                <a href="./index.html" class="mobile-menu__social-link" target="_blank"
+                                    rel="noopener noreferrer nofolow" aria-label="instagram">Instagram</a>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <a href="./index.html" class="mobile-menu__social-link" target="_blank"
+                                    rel="noopener noreferrer nofolow" aria-label="twitter">Twitter</a>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <a href="./index.html" class="mobile-menu__social-link" target="_blank"
+                                    rel="noopener noreferrer nofolow" aria-label="facebook">Facebook</a>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <a href="./index.html" class="mobile-menu__social-link" target="_blank"
+                                    rel="noopener noreferrer nofolow" aria-label="linkedIn">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -68,35 +71,67 @@
 
     <!-- Портфолио -->
     <main>
-        <section class="section-portfolio">
+        <section class="section">
             <div class="container">
                 <h1 class="visually-hidden">Примеры наших проектов</h1>
                 
                 <nav>
                     <ul class="filter-nav">
                         <li class="filter-nav__item">
-                            <button type="button" class="filter-nav__btn pointer">Все</button>
+                            <button type="button" class="filter-nav__btn">Все</button>
                         </li>
                         <li class="filter-nav__item">
-                            <button type="button" class="filter-nav__btn pointer">Веб-сайты</button>
+                            <button type="button" class="filter-nav__btn">Веб-сайты</button>
                         </li>
                         <li class="filter-nav__item">
-                            <button type="button" class="filter-nav__btn pointer">Приложения</button>
+                            <button type="button" class="filter-nav__btn">Приложения</button>
                         </li>
                         <li class="filter-nav__item">
-                            <button type="button" class="filter-nav__btn pointer">Дизайн</button>
+                            <button type="button" class="filter-nav__btn">Дизайн</button>
                         </li>
                         <li class="filter-nav__item">
-                            <button type="button" class="filter-nav__btn pointer">Маркетинг</button>
+                            <button type="button" class="filter-nav__btn">Маркетинг</button>
                         </li>
                     </ul>
                 </nav>
                 
-                <ul class="examples list">
+                <ul class="examples">
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio1.jpg" alt="Технокряк" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio1-370-min.jpg   370w,
+                                        ./images/img-portfolio1-740-min.jpg   740w,
+                                        ./images/img-portfolio1-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio1-354-min.jpg   354w,
+                                        ./images/img-portfolio1-708-min.jpg   708w,
+                                        ./images/img-portfolio1-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio1-450-min.jpg   450w,
+                                        ./images/img-portfolio1-900-min.jpg   900w,
+                                        ./images/img-portfolio1-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio1-354-min.jpg" 
+                                    alt="Технокряк"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -113,7 +148,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio2.jpg" alt="Постер New Orlean vs Golden Star" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio2-370-min.jpg   370w,
+                                        ./images/img-portfolio2-740-min.jpg   740w,
+                                        ./images/img-portfolio2-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio2-354-min.jpg   354w,
+                                        ./images/img-portfolio2-708-min.jpg   708w,
+                                        ./images/img-portfolio2-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio2-450-min.jpg   450w,
+                                        ./images/img-portfolio2-900-min.jpg   900w,
+                                        ./images/img-portfolio2-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio2-354-min.jpg" 
+                                    alt="Постер New Orlean vs Golden Star"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -130,7 +197,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio3.jpg" alt="Ресторан Seafood" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio3-370-min.jpg   370w,
+                                        ./images/img-portfolio3-740-min.jpg   740w,
+                                        ./images/img-portfolio3-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio3-354-min.jpg   354w,
+                                        ./images/img-portfolio3-708-min.jpg   708w,
+                                        ./images/img-portfolio3-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio3-450-min.jpg   450w,
+                                        ./images/img-portfolio3-900-min.jpg   900w,
+                                        ./images/img-portfolio3-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio3-354-min.jpg" 
+                                    alt="Ресторан Seafood"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -147,7 +246,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio4.jpg" alt="Проект Prime" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio4-370-min.jpg   370w,
+                                        ./images/img-portfolio4-740-min.jpg   740w,
+                                        ./images/img-portfolio4-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio4-354-min.jpg   354w,
+                                        ./images/img-portfolio4-708-min.jpg   708w,
+                                        ./images/img-portfolio4-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio4-450-min.jpg   450w,
+                                        ./images/img-portfolio4-900-min.jpg   900w,
+                                        ./images/img-portfolio4-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio4-354-min.jpg" 
+                                    alt="Проект Prime"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -164,7 +295,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio5.jpg" alt="Проект Boxes" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio5-370-min.jpg   370w,
+                                        ./images/img-portfolio5-740-min.jpg   740w,
+                                        ./images/img-portfolio5-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio5-354-min.jpg   354w,
+                                        ./images/img-portfolio5-708-min.jpg   708w,
+                                        ./images/img-portfolio5-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio5-450-min.jpg   450w,
+                                        ./images/img-portfolio5-900-min.jpg   900w,
+                                        ./images/img-portfolio5-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio5-354-min.jpg" 
+                                    alt="Проект Boxes"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -181,7 +344,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio6.jpg" alt="Inspiration has no Borders" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio6-370-min.jpg   370w,
+                                        ./images/img-portfolio6-740-min.jpg   740w,
+                                        ./images/img-portfolio6-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio6-354-min.jpg   354w,
+                                        ./images/img-portfolio6-708-min.jpg   708w,
+                                        ./images/img-portfolio6-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio6-450-min.jpg   450w,
+                                        ./images/img-portfolio6-900-min.jpg   900w,
+                                        ./images/img-portfolio6-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio6-354-min.jpg" 
+                                    alt="Inspiration has no Borders"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -198,7 +393,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio7.jpg" alt="Издание Limited Edition" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio7-370-min.jpg   370w,
+                                        ./images/img-portfolio7-740-min.jpg   740w,
+                                        ./images/img-portfolio7-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio7-354-min.jpg   354w,
+                                        ./images/img-portfolio7-708-min.jpg   708w,
+                                        ./images/img-portfolio7-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio7-450-min.jpg   450w,
+                                        ./images/img-portfolio7-900-min.jpg   900w,
+                                        ./images/img-portfolio7-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio7-354-min.jpg" 
+                                    alt="Издание Limited Edition"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -215,7 +442,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio8.jpg" alt="Проект LAB" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio8-370-min.jpg   370w,
+                                        ./images/img-portfolio8-740-min.jpg   740w,
+                                        ./images/img-portfolio8-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio8-354-min.jpg   354w,
+                                        ./images/img-portfolio8-708-min.jpg   708w,
+                                        ./images/img-portfolio8-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio8-450-min.jpg   450w,
+                                        ./images/img-portfolio8-900-min.jpg   900w,
+                                        ./images/img-portfolio8-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio8-354-min.jpg" 
+                                    alt="Проект LAB"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -232,7 +491,39 @@
                     <li class="examples__item">
                         <a href="" class="examples-card__link">
                             <div class="examples-card">
-                                <img src="./images/img-portfolio9.jpg" alt="Growing Business" width="370">
+                                <picture>
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio9-370-min.jpg   370w,
+                                        ./images/img-portfolio9-740-min.jpg   740w,
+                                        ./images/img-portfolio9-1110-min.jpg  1110w
+                                      "
+                                      media="(min-width: 1200px)"
+                                      sizes="(min-width: 1200px) 33vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio9-354-min.jpg   354w,
+                                        ./images/img-portfolio9-708-min.jpg   708w,
+                                        ./images/img-portfolio9-1062-min.jpg  1062w
+                                      "
+                                      media="(min-width: 768px)"
+                                      sizes="(min-width: 768px) 50vw"
+                                    />
+                                    <source
+                                      srcset="
+                                        ./images/img-portfolio9-450-min.jpg   450w,
+                                        ./images/img-portfolio9-900-min.jpg   900w,
+                                        ./images/img-portfolio9-1350-min.jpg  1350w
+                                      "
+                                      media="(max-width: 767px)"
+                                      sizes="100vw"
+                                    />
+                                    <img 
+                                    src="./images/img-portfolio9-354-min.jpg" 
+                                    alt="Growing Business"
+                                    >
+                                </picture>
                                 <div class="examples-card__overlay">
                                     <p class="examples-card__description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -326,6 +617,8 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

@@ -30,6 +30,8 @@
 }
 
 .filter-nav__btn {
+    @extend %pointer;
+    
     padding: 6px 22px;
 
     color: $title-text-color;
@@ -47,8 +49,8 @@
         color $time-animation $timing-function,
         box-shadow $time-animation $timing-function;
     
-    &__btn:hover,
-    &__btn:focus {
+    &:hover,
+    &:focus {
         color: $primary-white-color;
         
         background-color: $accent-color;

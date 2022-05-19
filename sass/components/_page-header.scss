@@ -15,11 +15,13 @@
 
 .nav__btn {
     display: inline-flex;
+    z-index: 2;
     margin: 0;
     padding: 10px 0;
-    border: none;
+
     background-color: transparent;
-    z-index: 2;
+    border: none;
+
     transition: fill $time-animation $timing-function;
 
     &--is-open {
@@ -50,9 +52,9 @@
     display: none;
 }
 
-// menu-block
+// mobile-menu
 
-.menu-block {
+.mobile-menu {
     @media screen and (max-width: 767px) {
         position: fixed;
         top: 0;
@@ -78,7 +80,7 @@
     }
 }
 
-.menu-block__social {
+.mobile-menu__social {
     @extend %list;
     
     display: inline-block;
