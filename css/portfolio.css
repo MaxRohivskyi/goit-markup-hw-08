@@ -363,7 +363,7 @@ img {
   overflow: hidden;
 }
 
-.menu-block__social, .site-nav, .adress-nav, .footer-adress, .footer-social {
+.menu-block__social, .site-nav, .adress-nav, .filter-nav, .footer-adress, .footer-social {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -771,6 +771,66 @@ img {
   .adress-nav__mail {
     margin-right: 30px;
   }
+}
+
+/* filter */
+.filter-nav {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-nav {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter-nav__item {
+    display: inline-block;
+  }
+  .filter-nav__item:nth-child(n + 4) {
+    margin-top: 15px;
+  }
+}
+
+.filter-nav__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-nav__btn {
+  padding: 6px 22px;
+  color: #212121;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-nav__btn__btn:hover, .filter-nav__btn__btn:focus {
+  color: white;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* page-footer */
